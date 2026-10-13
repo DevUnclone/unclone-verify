@@ -1,0 +1,5 @@
+﻿node_modules/
+program/target/
+.env*
+*.tsbuildinfo
+.DS_Store

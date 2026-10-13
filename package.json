@@ -1,0 +1,22 @@
+{
+  "name": "unclone-verify",
+  "version": "1.0.0",
+  "private": false,
+  "description": "The one-time-signature scheme behind unclone.fun, and the code to check it yourself.",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://unclone.fun",
+  "repository": { "type": "git", "url": "https://github.com/DevUnclone/unclone-verify" },
+  "engines": { "node": ">=22.6" },
+  "scripts": {
+    "verify": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON verify.mjs",
+    "probe-crypto": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/probe-crypto.mts",
+    "probe-pq": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/probe-pq.mts",
+    "check": "npm run verify && npm run probe-crypto && npm run probe-pq"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.7.1",
+    "@noble/post-quantum": "^0.7.1",
+    "@noble/curves": "^1.9.0"
+  }
+}
